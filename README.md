@@ -8,13 +8,48 @@
 
 **公开范围：** 方法论、匿名复盘、原创通用示意图、模板和全新演示脚本。这里没有原公司的源码、Logo、人物、资料、聊天截图或部署信息；画面均为重新制作的示意。
 
+## 快速开始：安装到自己的 Codex
+
+### 1. 复制安装指令
+
+在自己的 **Codex 聊天输入框**粘贴并发送下面整段内容。代码块右上角的复制按钮可直接复制：
+
+```text
+请用 $skill-installer 安装下面的 Codex Skill：
+https://github.com/jia1974346649-beep/digital-card-workflow-skill/tree/main/skills/card-product-workflow
+```
+
+安装器会下载完整的 `card-product-workflow` 文件夹，包含指令、参考资料、模板和检查脚本。安装成功后，在下一条消息中使用；如果还没有识别到，重启 Codex 再试。
+
+### 2. 复制使用示例
+
+在 Codex 中打开自己的项目，然后发送：
+
+```text
+使用 $card-product-workflow。
+我要做一个数字名片产品，请先整理需求，
+划分员工、管理员、总管理员和访客的权限，
+再给出首版范围、开发步骤和验证计划。
+先完成规划，等我确认后再开始实现。
+```
+
+安装后可用名称为 `card-product-workflow`，显示名称为“名片产品全流程”。也可以描述具体问题，让 Codex 按这套工作法推进。
+
+### 3. 准备自己的项目资料
+
+提供目标用户、平台、已有代码和本次要完成的事情即可。现有项目可以直接从研究、开发、修复或交付中的任意阶段开始。
+
+安装得到的是可复用的产品工作法、参考资料和模板。完整的名片应用需要在自己的项目中开发；微信、云服务、数据库与发布操作需要使用者自己的账号、配置和授权。运行本仓库提供的 Python 校验脚本时才需要准备 Python。
+
+安装与技能发现机制见 [OpenAI 官方 Skill 说明](https://developers.openai.com/codex/skills)。
+
 ## 从哪里看
 
 | 想了解的内容 | 入口 |
 | --- | --- |
 | 最初如何从一个大目标拆出产品范围 | [产品研究到交付](docs/research-to-delivery.md) |
 | 真实迭代中做了哪些判断、犯过哪些错 | [匿名项目案例](docs/case-study.md) |
-| 安装并使用这套工作法 | [Skill 主入口](skills/card-product-workflow/SKILL.md) |
+| 安装并使用这套工作法 | [快速开始](#快速开始安装到自己的-codex) · [Skill 主入口](skills/card-product-workflow/SKILL.md) |
 | 看作品展示图与流程卡片 | [静态作品页](index.html) · [流程总览](assets/process-overview.svg) |
 | 理解本人、团队与访客之间的关系 | [通用架构图](assets/role-and-state-map.svg) |
 | 看目标如何转成可验证的工作项 | [需求拆解示例](examples/discovery-brief.md) |
@@ -31,11 +66,9 @@
 - **验证说得过满：** 将单测、浏览器、原生模拟器、真实设备、实际收件和平台版本核对分别记录。
 - **交付说明落后：** 按角色组织手册，在相应动作旁说明设备差异，保留截图真实来源。
 
-## 使用
+## 更多使用示例与手动安装
 
-将 `skills/card-product-workflow` 整个文件夹复制到你当前 Codex 环境使用的 skills 目录，保留其中的引用与模板。也可在有权访问该目录的任务中明确指定 `SKILL.md`。
-
-示例请求：
+### 研究与需求拆解
 
 ```text
 使用 $card-product-workflow。
@@ -44,12 +77,36 @@
 请给需求矩阵、角色边界和验证计划，不要复制品牌素材。
 ```
 
+### 修复已有项目
+
 ```text
 使用 $card-product-workflow。
 访客再次打开名片时偶尔看不到资料。
 请先复现并画出读取、缓存和权限状态，再做针对性修复；
 区分浏览器、模拟器与真实设备证据，别自动重复分享。
 ```
+
+### 更新三种身份的使用说明
+
+```text
+使用 $card-product-workflow。
+请根据当前项目的实际功能和版本证据，
+分别更新员工、管理员和总管理员的使用流程。
+排版整齐，标清截图来源；未验证的步骤明确标注。
+```
+
+### 手动安装
+
+也可以下载本仓库，解压后将 `skills/card-product-workflow` **整个文件夹**复制到以下一个位置：
+
+| 使用范围 | 复制后的目录 |
+| --- | --- |
+| 自己的所有项目 | `~/.agents/skills/card-product-workflow/` |
+| 仅当前项目 | `<项目根目录>/.agents/skills/card-product-workflow/` |
+
+`~` 表示用户主目录；如果当前 Codex 环境配置了其他技能目录，以该环境实际识别的位置为准。保留 `references/`、`assets/`、`scripts/` 和 `agents/` 等随附目录，确保目标目录中直接包含 `SKILL.md`。
+
+复制完成后，在下一条消息中调用 `$card-product-workflow`；如果未识别到，重启 Codex。已有同名技能时，先核对已有内容和来源，再决定是否替换。
 
 ## 可直接复用的材料
 
