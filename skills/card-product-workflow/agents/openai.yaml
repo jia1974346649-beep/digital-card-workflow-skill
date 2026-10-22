@@ -1,0 +1,4 @@
+interface:
+  display_name: "名片产品全流程"
+  short_description: "从产品研究到角色流程、原生验证与交付文档的可复用工作法"
+  default_prompt: "使用 $card-product-workflow，先整理我的数字名片产品目标与角色边界，再按证据逐步推进实现和交付。"

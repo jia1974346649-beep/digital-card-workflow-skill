@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "mode": "demo",
+  "notes": "虚构状态，仅演示为何浏览器、模拟器与实际收件不能混用，不是真实项目验收。",
+  "artifact": {"version": "demo-v2", "digest": "DEMO_BUILD_A"},
+  "claims": [
+    {
+      "scenario": "contact-form-layout",
+      "checks": [
+        {"kind": "native-ui", "environment": "simulator-webview"},
+        {"kind": "device-ui", "environment": "phone-android"}
+      ]
+    },
+    {
+      "scenario": "visitor-forwarding",
+      "checks": [{"kind": "message-receipt", "environment": "two-test-accounts"}]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "demo-browser",
+      "scenario": "contact-form-layout",
+      "kind": "browser",
+      "environment": "desktop-browser",
+      "version": "demo-v2",
+      "digest": "DEMO_BUILD_A",
+      "result": "passed",
+      "observed_at": "2026-01-01T08:00:00Z",
+      "origin": "synthetic"
+    },
+    {
+      "id": "demo-native",
+      "scenario": "contact-form-layout",
+      "kind": "native-ui",
+      "environment": "simulator-webview",
+      "version": "demo-v2",
+      "digest": "DEMO_BUILD_A",
+      "result": "passed",
+      "observed_at": "2026-01-01T08:10:00Z",
+      "origin": "synthetic"
+    }
+  ],
+  "upload_state": {"status": "unknown"},
+  "experience_state": {"status": "not-tested"}
+}

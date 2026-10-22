@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0,0,1200,800" role="img" aria-labelledby="title desc">
+<title id="title">角色边界与公开状态</title><desc id="desc">员工、管理员、所有者与访客分别操作，资料通过审核与公开投影后展示，咨询仍交给原持卡人。各阶段结果分开验证。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#7891a7"/></marker></defs>
+<rect width="1200" height="800" rx="24" fill="#f4f7fc"/>
+<g font-family="system-ui, 'Microsoft YaHei', sans-serif">
+<text x="50" y="68" font-size="36" font-weight="750" fill="#142c45">身份不混用，状态不混写</text><text x="50" y="105" font-size="19" fill="#607487">通用架构示意，不含任何真实业务系统地址或数据。</text>
+<g fill="white" stroke="#d9e4ee"><rect x="50" y="146" width="256" height="155" rx="16"/><rect x="330" y="146" width="256" height="155" rx="16"/><rect x="610" y="146" width="256" height="155" rx="16"/><rect x="890" y="146" width="260" height="155" rx="16"/></g>
+<g font-size="26" font-weight="700" fill="#1c4d86"><text x="74" y="191">员工</text><text x="354" y="191">管理员</text><text x="634" y="191">所有者</text><text x="914" y="191">访客</text></g>
+<g font-size="18" fill="#526e84"><text x="74" y="230">维护本人资料</text><text x="74" y="263">继承公司展示</text><text x="354" y="230">统一模板与内容</text><text x="354" y="263">邀请、审批普通员工</text><text x="634" y="230">管理员设定与取消</text><text x="634" y="263">受保护的组织权限</text><text x="914" y="230">只看公开资料</text><text x="914" y="263">转发仍保留原持卡人</text></g>
+<rect x="50" y="335" width="1100" height="58" rx="12" fill="#e5eefb"/><text x="600" y="372" text-anchor="middle" font-size="21" font-weight="650" fill="#244c7b">服务端权限与公开字段边界：界面和缓存都不能绕过</text>
+<g fill="white" stroke="#cfdde9"><rect x="50" y="438" width="245" height="116" rx="14"/><rect x="335" y="438" width="245" height="116" rx="14"/><rect x="620" y="438" width="245" height="116" rx="14"/><rect x="905" y="438" width="245" height="116" rx="14"/></g>
+<g fill="#142c45" font-size="23" font-weight="700" text-anchor="middle"><text x="172" y="481">本人资料与私有媒体</text><text x="457" y="481">审核与公开投影</text><text x="742" y="481">公开名片与转发</text><text x="1027" y="481">原持卡人收取咨询</text></g>
+<g fill="#607487" font-size="17" text-anchor="middle"><text x="172" y="519">上传完成不等于公开</text><text x="457" y="519">只读允许公开的内容</text><text x="742" y="519">稳定入口与当前权限</text><text x="1027" y="519">结构化新字段＋旧原文</text></g>
+<g fill="none" stroke="#7891a7" stroke-width="2" marker-end="url(#arrow)"><path d="M299 496h29"/><path d="M584 496h29"/><path d="M869 496h29"/></g>
+<rect x="50" y="598" width="1100" height="128" rx="16" fill="#153655"/>
+<text x="76" y="638" font-size="22" font-weight="700" fill="white">证据分开记</text><text x="76" y="677" font-size="19" fill="#d8e8f4">逻辑测试　→　浏览器　→　原生环境　→　真实设备　→　实际收件　→　平台版本</text><text x="50" y="766" font-size="17" fill="#607487">箭头表示工作顺序，不表示后一类证据可以替代前面所有场景。</text>
+</g></svg>
